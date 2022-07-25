@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CALCULA IMC</title> 
+</head>
+<style>
+    .fundo{
+        background:rgb(111, 5, 99);
+        margin-top: 0px;
+        height: 100vh;
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    .calcula{
+        position: absolute;
+        background-color: rgba(0, 0, 0,0.8);
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 15px;
+        padding:15px;
+    }
+
+    #calcular{
+        width: 100px;
+        height: 25px;
+        font-size: 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        background-color:rgb(31, 35, 31);
+        border: none;
+        color: #fff;
+    }
+    #calcular:hover{
+        background-color: gray;
+    }
+    #resultado{
+        width: 100px;
+        height: 25px;
+    }
+</style>
+<body>
+    <div class="fundo">
+        <h1><strong>CALCULE SEU ÍNDICE DE MASSA CORPORAL</strong></h1>
+        <div class="calcula">
+            <span id="resultado"> </span>
+            <p>Informe sua massa(kg):</p>
+            <input id="massa"><br> 
+            <p>Informe sua altura(m):</p>
+            <input id="altura"> <br>
+            <button id="calcular" onclick="calcular()">CALCULAR</button>
+        </div>
+    </div>
+</body>
+<script>
+var massa = document.querySelector('#massa');
+var altura = document.querySelector('#altura');
+var resultado = document.querySelector('span');  
+var estilo = document.querySelector('span');
+function calcular()
+{
+    resultado.innerHTML = (parseFloat(massa.value) / parseFloat(altura.value*altura.value)).toFixed(2);
+    if((resultado.innerHTML > 18.5) && (resultado.innerHTML < 25))
+    {
+        estilo.style.background = 'green';
+        estilo.style.color = 'white';
+    }
+    else if (resultado.innerHTML < 18.5)
+    {
+        estilo.style.background = 'blue';
+        estilo.style.color = 'white';
+    }
+    if(resultado.innerHTML > 25)
+    { 
+        estilo.style.background = 'red';
+        estilo.style.color = 'white';
+    }
+       
+}
+</script>
+</html>
