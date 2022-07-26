@@ -4,13 +4,13 @@
     <title>CALCULA IMC</title> 
 </head>
 <style>
-    .fundo{
-        background:rgb(111, 5, 99);
-        margin-top: 0px;
+    body{
+        background-color: greenyellow;
         height: 100vh;
         color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
+        margin-top: 0px;
     }
     .calcula{
         position: absolute;
@@ -43,14 +43,14 @@
 <body>
     <div class="fundo">
         <h1><strong>CALCULE SEU ÍNDICE DE MASSA CORPORAL</strong></h1>
-        <div class="calcula">
-            <span id="resultado"> </span>
-            <p>Informe sua massa(kg):</p>
-            <input id="massa"><br> 
-            <p>Informe sua altura(m):</p>
-            <input id="altura"> <br>
-            <button id="calcular" onclick="calcular()">CALCULAR</button>
-        </div>
+            <div class="calcula">
+                <span id="resultado"> </span>
+                <p>Informe sua massa(kg):</p>
+                <input id="massa"><br> 
+                <p>Informe sua altura(m):</p>
+                <input id="altura"> <br>
+                <button id="calcular" onclick="calcular()">CALCULAR</button>
+            </div>
     </div>
 </body>
 <script>
