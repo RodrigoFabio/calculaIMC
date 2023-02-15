@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CALCULA IMC</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fundo">
+        <img src="imagem.png" class="imagem">
+        <div class="principal">
+            
+                <h1 class="titulo"><strong>CALCULE SEU ÍNDICE DE MASSA CORPORAL</strong></h1>
+          
+                       
+                <div class="boxResultado">
+                    <div style="display:flex; flex-direction:row; margin-left: 30px;">
+                        <span id="resultado"></span> 
+                        <p id="mensagem" style="color:aliceblue"><Strong>IMC</Strong> </p> 
+                    </div>
+                    
+                    <span id="resultado"> </span>
+                    <div style="display: flex; flex-direction: row; margin-left:5px; color: aliceblue; font-weight: bold;">
+                        <p style="background-color: blue;width: 80px;">Subpeso</p><p style="background-color: rgb(12, 150, 10);width: 80px ">Normal</p><p style="background-color: rgb(200, 3, 3);width: 80px">Sobrepeso</p>
+                    </div>
+                    <div class="numeros">
+                        <p>16,0 </p><p>18,5</p><p> 25,0</p><p>40,0</p>
+                    </div>
+                   
+                </div>
+                <div class="calcula">
+                        <div style="display: flex; flex-direction: row; justify-content: space-evenly">
+                            <div style="margin-right: 40px;">
+                                <p ><Strong>Massa(kg):</Strong></p>
+                                 <input id="Massa" class="entrada"><br>  
+                            </div>
+                            <div>
+                                <p ><Strong>Altura(m):</Strong></p>
+                                <input id="Altura" class="entrada"> <br>
+                            </div>  
+                        </div>
+                        
+                        <button id="botao"><Strong>CALCULAR</Strong></button>
+                  
+                    
+                </div>         
+        </div>   
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
